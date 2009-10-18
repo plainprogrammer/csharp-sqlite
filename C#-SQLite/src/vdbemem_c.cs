@@ -9,9 +9,9 @@ using u32 = System.UInt32;
 
 namespace CS_SQLite3
 {
-  using sqlite3_value = csSQLite.Mem;
+  using sqlite3_value = CSSQLite.Mem;
 
-  public partial class csSQLite
+  public partial class CSSQLite
   {
     /*
     ** 2004 May 26

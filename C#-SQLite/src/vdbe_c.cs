@@ -18,11 +18,11 @@ using Pgno = System.UInt32;
 
 namespace CS_SQLite3
 {
-  using sqlite3_value = csSQLite.Mem;
-  using Op = csSQLite.VdbeOp;
+  using sqlite3_value = CSSQLite.Mem;
+  using Op = CSSQLite.VdbeOp;
   using System;
 
-  public partial class csSQLite
+  public partial class CSSQLite
   {
     /*
     ** 2001 September 15

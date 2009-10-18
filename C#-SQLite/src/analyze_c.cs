@@ -8,7 +8,7 @@ namespace CS_SQLite3
 {
   using sqlite3_int64 = System.Int64;
 
-  public partial class csSQLite
+  public partial class CSSQLite
   {
     /*
     ** 2005 July 8

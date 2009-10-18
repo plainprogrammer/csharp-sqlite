@@ -12,7 +12,7 @@
 
 namespace CS_SQLite3
 {
-  public partial class csSQLite
+  public partial class CSSQLite
   {
     //#define TK_SEMI                            1
     //#define TK_EXPLAIN                         2

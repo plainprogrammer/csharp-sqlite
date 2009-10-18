@@ -5,7 +5,7 @@ namespace CS_SQLite3
 
   using u8 = System.Byte;
 
-  public partial class csSQLite
+  public partial class CSSQLite
   {
     /*
     ** 2001 September 15

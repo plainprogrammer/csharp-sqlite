@@ -6,7 +6,7 @@ using u8 = System.Byte;
 using u32 = System.UInt32;
 namespace CS_SQLite3
 {
-  public partial class csSQLite
+  public partial class CSSQLite
   {
     /*
     **

@@ -5,7 +5,7 @@ using i64 = System.Int64;
 
 namespace CS_SQLite3
 {
-  public partial class csSQLite
+  public partial class CSSQLite
   {
     /*
     ** 2001 September 15

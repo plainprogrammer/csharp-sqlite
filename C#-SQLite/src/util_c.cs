@@ -16,7 +16,7 @@ namespace CS_SQLite3
   using sqlite_int64 = System.Int64;
   using System.Globalization;
 
-  public partial class csSQLite
+  public partial class CSSQLite
   {
     /*
     ** 2001 September 15

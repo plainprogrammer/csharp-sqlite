@@ -14,9 +14,9 @@ using YYACTIONTYPE = System.Int32;
 
 namespace CS_SQLite3
 {
-  using sqlite3ParserTOKENTYPE = csSQLite.Token;
+  using sqlite3ParserTOKENTYPE = CSSQLite.Token;
 
-  public partial class csSQLite
+  public partial class CSSQLite
   {
     /*
     **

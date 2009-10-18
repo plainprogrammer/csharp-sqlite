@@ -7,7 +7,7 @@ using u32 = System.UInt32;
 
 namespace CS_SQLite3
 {
-  public partial class csSQLite
+  public partial class CSSQLite
   {
     /*
     ** 2008 August 16

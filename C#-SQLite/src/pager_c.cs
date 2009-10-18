@@ -14,8 +14,8 @@ using Pgno = System.UInt32;
 namespace CS_SQLite3
 {
   using System.Text;
-  using DbPage = csSQLite.PgHdr;
-  public partial class csSQLite
+  using DbPage = CSSQLite.PgHdr;
+  public partial class CSSQLite
   {
     /*
     ** 2001 September 15

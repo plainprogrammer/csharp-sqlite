@@ -12,7 +12,7 @@ namespace CS_SQLite3
   using sqlite_u3264 = System.UInt64;
   using va_list = System.Object;
 
-  public partial class csSQLite
+  public partial class CSSQLite
   {
     /*
     ** The "printf" code that follows dates from the 1980's.  It is in

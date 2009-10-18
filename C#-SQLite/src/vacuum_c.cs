@@ -8,9 +8,9 @@ using u32 = System.UInt32;
 
 namespace CS_SQLite3
 {
-  using sqlite3_stmt = csSQLite.Vdbe;
+  using sqlite3_stmt = CSSQLite.Vdbe;
 
-  public partial class csSQLite
+  public partial class CSSQLite
   {
     /*
     ** 2003 April 6

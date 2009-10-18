@@ -30,7 +30,7 @@ namespace CS_SQLite3
     }
   }
 
-  public partial class csSQLite
+  public partial class CSSQLite
   {
     /// <summary>
     /// Basic locking strategy for Console/Winform applications

@@ -4,10 +4,10 @@ using System.Text;
 
 namespace CS_SQLite3
 {
-  using sqlite3_callback = csSQLite.dxCallback;
-  using sqlite3_stmt = csSQLite.Vdbe;
+  using sqlite3_callback = CSSQLite.dxCallback;
+  using sqlite3_stmt = CSSQLite.Vdbe;
 
-  public partial class csSQLite
+  public partial class CSSQLite
   {
 
     /*

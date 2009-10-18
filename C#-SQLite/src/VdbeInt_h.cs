@@ -15,9 +15,9 @@ using Pgno = System.UInt32;
 
 namespace CS_SQLite3
 {
-  using Op = csSQLite.VdbeOp;
+  using Op = CSSQLite.VdbeOp;
 
-  public partial class csSQLite
+  public partial class CSSQLite
   {
     /*
     ** 2003 September 6

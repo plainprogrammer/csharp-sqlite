@@ -2,7 +2,7 @@ namespace CS_SQLite3
 {
   using sqlite_u3264 = System.UInt64;
 
-  public partial class csSQLite
+  public partial class CSSQLite
   {
     /*
     ** 2008 May 27

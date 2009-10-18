@@ -10,9 +10,9 @@ using u32 = System.UInt32;
 namespace CS_SQLite3
 {
   using sqlite3_int64 = System.Int64;
-  using MemJournal = csSQLite.sqlite3_file;
+  using MemJournal = CSSQLite.sqlite3_file;
 
-  public partial class csSQLite
+  public partial class CSSQLite
   {
     /*
     ** 2007 August 22

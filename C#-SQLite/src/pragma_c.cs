@@ -7,7 +7,7 @@ using u8 = System.Byte;
 
 namespace CS_SQLite3
 {
-  public partial class csSQLite
+  public partial class CSSQLite
   {
     /*
     ** 2003 April 6

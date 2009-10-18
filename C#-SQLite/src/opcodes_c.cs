@@ -11,7 +11,7 @@
     */
 namespace CS_SQLite3
 {
-  public partial class csSQLite
+  public partial class CSSQLite
   {
     /* Automatically generated.  Do not edit */
     /* See the mkopcodec.awk script for details. */

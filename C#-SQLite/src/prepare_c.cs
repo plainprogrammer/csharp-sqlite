@@ -9,9 +9,9 @@ using sqlite3_int64 = System.Int64;
 
 namespace CS_SQLite3
 {
-  using sqlite3_stmt = csSQLite.Vdbe;
+  using sqlite3_stmt = CSSQLite.Vdbe;
 
-  public partial class csSQLite
+  public partial class CSSQLite
   {
     /*
     ** 2005 May 25

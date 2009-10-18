@@ -20,10 +20,10 @@ using time_t = System.Int64;
 
 namespace CS_SQLite3
 {
-  using sqlite3_value = csSQLite.Mem;
+  using sqlite3_value = CSSQLite.Mem;
   using sqlite_int64 = System.Int64;
 
-  public partial class csSQLite
+  public partial class CSSQLite
   {
 
     static int atoi( byte[] inStr )

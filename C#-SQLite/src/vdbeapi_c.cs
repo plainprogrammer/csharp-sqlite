@@ -9,12 +9,12 @@ using u64 = System.UInt64;
 
 namespace CS_SQLite3
 {
-  using Op = csSQLite.VdbeOp;
-  using sqlite3_value = csSQLite.Mem;
-  using sqlite3_stmt = csSQLite.Vdbe;
+  using Op = CSSQLite.VdbeOp;
+  using sqlite3_value = CSSQLite.Mem;
+  using sqlite3_stmt = CSSQLite.Vdbe;
   using sqlite_int64 = System.Int64;
 
-  public partial class csSQLite
+  public partial class CSSQLite
   {
     /*
     ** 2004 May 26

@@ -2,7 +2,7 @@ using System.Diagnostics;
 
 namespace CS_SQLite3
 {
-  public partial class csSQLite
+  public partial class CSSQLite
   {
     /***** This file contains automatically generated code ******
     **

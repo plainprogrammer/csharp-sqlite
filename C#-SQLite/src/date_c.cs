@@ -9,9 +9,9 @@ using u64 = System.UInt64;
 
 namespace CS_SQLite3
 {
-  using sqlite3_value = csSQLite.Mem;
+  using sqlite3_value = CSSQLite.Mem;
 
-  public partial class csSQLite
+  public partial class CSSQLite
   {
     /*
     ** 2003 October 31

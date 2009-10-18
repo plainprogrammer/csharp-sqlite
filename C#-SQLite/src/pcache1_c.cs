@@ -8,9 +8,9 @@ using Pgno = System.UInt32;
 
 namespace CS_SQLite3
 {
-  using sqlite3_value = csSQLite.Mem;
-  using sqlite3_pcache = csSQLite.PCache1;
-  public partial class csSQLite
+  using sqlite3_value = CSSQLite.Mem;
+  using sqlite3_pcache = CSSQLite.PCache1;
+  public partial class CSSQLite
   {
     /*
     ** 2008 November 05

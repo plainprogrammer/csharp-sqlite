@@ -24,12 +24,12 @@ using Pgno = System.UInt32;
 
 namespace CS_SQLite3
 {
-  using DbPage = csSQLite.PgHdr;
-  using sqlite3_stmt = csSQLite.Vdbe;
-  using sqlite3_value = csSQLite.Mem;
-  using sqlite3_pcache = csSQLite.PCache1;
+  using DbPage = CSSQLite.PgHdr;
+  using sqlite3_stmt = CSSQLite.Vdbe;
+  using sqlite3_value = CSSQLite.Mem;
+  using sqlite3_pcache = CSSQLite.PCache1;
 
-  public partial class csSQLite
+  public partial class CSSQLite
   {
     public delegate void dxAuth( object pAuthArg, int b, string c, string d, string e, string f );
     public delegate int dxBusy( object pBtShared, int iValue );
