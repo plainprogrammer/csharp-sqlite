@@ -114,7 +114,7 @@ static void sqlite3_progress_handler (sqlite3 db,       int nOps, dxProgress xPr
 #if SQLITE_OMIT_GET_TABLE
     //# define //sqlite3_free_table    0
     //# define sqlite3_get_table     0
-    static public int sqlite3_get_table(
+    public static int sqlite3_get_table(
     sqlite3 db,             /* An open database */
     string zSql,            /* SQL to be evaluated */
     ref string[] pazResult, /* Results of the query */
@@ -461,7 +461,7 @@ static void sqlite3_progress_handler (sqlite3 db,       int nOps, dxProgress xPr
       return SQLITE_OK;
     }
 
-    static public int sqlite3_load_extension(
+    public static int sqlite3_load_extension(
     sqlite3 db,          /* Load the extension into this database connection */
     string zFile,        /* Name of the shared library containing extension */
     string zProc,        /* Entry point.  Use "sqlite3_extension_init" if 0 */
@@ -495,7 +495,7 @@ static void sqlite3_progress_handler (sqlite3 db,       int nOps, dxProgress xPr
     ** Enable or disable extension loading.  Extension loading is disabled by
     ** default so as not to open security holes in older applications.
     */
-    static public int sqlite3_enable_load_extension( sqlite3 db, int onoff )
+    public static int sqlite3_enable_load_extension( sqlite3 db, int onoff )
     {
       sqlite3_mutex_enter( db.mutex );
       if ( onoff != 0 )

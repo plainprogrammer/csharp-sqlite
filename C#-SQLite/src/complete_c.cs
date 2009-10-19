@@ -116,7 +116,7 @@ namespace CS_SQLite3
     ** to recognize the end of a trigger can be omitted.  All we have to do
     ** is look for a semicolon that is not part of an string or comment.
     */
-    static public int sqlite3_complete( string zSql )
+    public static int sqlite3_complete( string zSql )
     {
       int state = 0;   /* Current state, using numbers defined in header comment */
       int token;       /* Value of the next token */

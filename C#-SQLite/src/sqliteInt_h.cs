@@ -405,7 +405,7 @@ static bool NEVER<T>(T X) { return false; }
     ** the default file format for new databases and the maximum file format
     ** that the library can read.
     */
-    static public int SQLITE_MAX_FILE_FORMAT = 4;//#define SQLITE_MAX_FILE_FORMAT 4
+    public static int SQLITE_MAX_FILE_FORMAT = 4;//#define SQLITE_MAX_FILE_FORMAT 4
 #if !SQLITE_DEFAULT_FILE_FORMAT
     static int SQLITE_DEFAULT_FILE_FORMAT = 1;//# define SQLITE_DEFAULT_FILE_FORMAT 1
 #endif

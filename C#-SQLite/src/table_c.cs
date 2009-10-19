@@ -60,7 +60,7 @@ public int rc;
 ** is to fill in the TabResult structure appropriately, allocating new
 ** memory as necessary.
 */
-static public int sqlite3_get_table_cb( object pArg, i64 nCol, object Oargv, object Ocolv )
+public static int sqlite3_get_table_cb( object pArg, i64 nCol, object Oargv, object Ocolv )
 {
 string[] argv = (string[])Oargv;
 string[]colv = (string[])Ocolv;
@@ -137,7 +137,7 @@ return 1;
 ** Instead, the entire table should be passed to //sqlite3_free_table() when
 ** the calling procedure is finished using it.
 */
-static public int sqlite3_get_table(
+public static int sqlite3_get_table(
 sqlite3 db,               /* The database on which the SQL executes */
 string zSql,              /* The SQL to be executed */
 ref string[] pazResult,   /* Write the result table here */

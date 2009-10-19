@@ -3717,8 +3717,8 @@ namespace CS_SQLite3
     //typedef void (*sqlite3_destructor_type)(void*);
     //#define SQLITE_STATIC      ((sqlite3_destructor_type)0)
     //#define SQLITE_TRANSIENT   ((sqlite3_destructor_type)-1)
-    static public dxDel SQLITE_STATIC;
-    static public dxDel SQLITE_TRANSIENT;
+    public static dxDel SQLITE_STATIC;
+    public static dxDel SQLITE_TRANSIENT;
 
     /*
     ** CAPI3REF: Setting The Result Of An SQL Function {H16400} <S20200>

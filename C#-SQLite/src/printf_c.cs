@@ -1165,7 +1165,7 @@ for(idx=precision, rounder=0.4999; idx>0; idx--, rounder*=0.1);
     ** Print into memory obtained from sqlite3Malloc()().  Omit the internal
     ** %-conversion extensions.
     */
-    static public string sqlite3_mprintf( string zFormat, params va_list[] ap )
+    public static string sqlite3_mprintf( string zFormat, params va_list[] ap )
     { //, ...){
       //va_list ap;
       string z;
@@ -1184,7 +1184,7 @@ for(idx=precision, rounder=0.4999; idx>0; idx--, rounder*=0.1);
     ** are not able to use a "," as the decimal point in place of "." as
     ** specified by some locales.
     */
-    static public string sqlite3_snprintf( int n, ref StringBuilder zBuf, string zFormat, params va_list[] ap )
+    public static string sqlite3_snprintf( int n, ref StringBuilder zBuf, string zFormat, params va_list[] ap )
     {
       StringBuilder zBase = new StringBuilder( SQLITE_PRINT_BUF_SIZE );
       //va_list ap;
@@ -1205,7 +1205,7 @@ for(idx=precision, rounder=0.4999; idx>0; idx--, rounder*=0.1);
       return zBuf.ToString();
     }
 
-    static public string sqlite3_snprintf( int n, ref string zBuf, string zFormat, params va_list[] ap )
+    public static string sqlite3_snprintf( int n, ref string zBuf, string zFormat, params va_list[] ap )
     {
       string z;
       StringBuilder zBase = new StringBuilder( SQLITE_PRINT_BUF_SIZE );

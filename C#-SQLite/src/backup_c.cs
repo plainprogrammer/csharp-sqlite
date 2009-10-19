@@ -160,7 +160,7 @@ namespace CS_SQLite3
     ** If an error occurs, NULL is returned and an error code and error message
     ** stored in database handle pDestDb.
     */
-    static public sqlite3_backup sqlite3_backup_init(
+    public static sqlite3_backup sqlite3_backup_init(
     sqlite3 pDestDb,                 /* Database to write to */
     string zDestDb,                  /* Name of database within pDestDb */
     sqlite3 pSrcDb,                  /* Database connection to read from */
@@ -337,7 +337,7 @@ namespace CS_SQLite3
     /*
     ** Copy nPage pages from the source b-tree to the destination.
     */
-    static public int sqlite3_backup_step( sqlite3_backup p, int nPage )
+    public static int sqlite3_backup_step( sqlite3_backup p, int nPage )
     {
       int rc;
 
@@ -562,7 +562,7 @@ sqlite3BtreeCommitPhaseTwo(p.pSrc);
     /*
     ** Release all resources associated with an sqlite3_backup* handle.
     */
-    static public int sqlite3_backup_finish( sqlite3_backup p )
+    public static int sqlite3_backup_finish( sqlite3_backup p )
     {
       sqlite3_backup pp;                 /* Ptr to head of pagers backup list */
       sqlite3_mutex mutex;               /* Mutex to protect source database */

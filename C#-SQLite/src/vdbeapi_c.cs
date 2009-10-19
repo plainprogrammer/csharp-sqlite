@@ -97,7 +97,7 @@ sqlite3_mutex mutex = v.db.mutex;
     ** This routine sets the error code and string returned by
     ** sqlite3_errcode(), sqlite3_errmsg() and sqlite3_errmsg16().
     */
-    static public int sqlite3_reset( sqlite3_stmt pStmt )
+    public static int sqlite3_reset( sqlite3_stmt pStmt )
     {
       int rc;
       if ( pStmt == null )
@@ -143,7 +143,7 @@ sqlite3_mutex mutex = ( (Vdbe)pStmt ).db.mutex;
     ** The following routines extract information from a Mem or sqlite3_value
     ** structure.
     */
-    static byte[] sqlite3_value_blob( sqlite3_value pVal )
+    public static byte[] sqlite3_value_blob( sqlite3_value pVal )
     {
       Mem p = pVal;
       if ( ( p.flags & ( MEM_Blob | MEM_Str ) ) != 0 )
@@ -167,27 +167,27 @@ sqlite3_mutex mutex = ( (Vdbe)pStmt ).db.mutex;
         return sqlite3_value_text( pVal ) == null ? null : Encoding.UTF8.GetBytes( sqlite3_value_text( pVal ) );
       }
     }
-    static int sqlite3_value_bytes( sqlite3_value pVal )
+    public static int sqlite3_value_bytes( sqlite3_value pVal )
     {
       return sqlite3ValueBytes( pVal, SQLITE_UTF8 );
     }
-    static int sqlite3_value_bytes16( sqlite3_value pVal )
+    public static int sqlite3_value_bytes16( sqlite3_value pVal )
     {
       return sqlite3ValueBytes( pVal, SQLITE_UTF16NATIVE );
     }
-    static double sqlite3_value_double( sqlite3_value pVal )
+    public static double sqlite3_value_double( sqlite3_value pVal )
     {
       return sqlite3VdbeRealValue( pVal );
     }
-    static int sqlite3_value_int( sqlite3_value pVal )
+    public static int sqlite3_value_int( sqlite3_value pVal )
     {
       return (int)sqlite3VdbeIntValue( pVal );
     }
-    static sqlite_int64 sqlite3_value_int64( sqlite3_value pVal )
+    public static sqlite_int64 sqlite3_value_int64( sqlite3_value pVal )
     {
       return sqlite3VdbeIntValue( pVal );
     }
-    static string sqlite3_value_text( sqlite3_value pVal )
+    public static string sqlite3_value_text( sqlite3_value pVal )
     {
       return sqlite3ValueText( pVal, SQLITE_UTF8 );
     }
@@ -202,7 +202,7 @@ static string sqlite3_value_text16le(sqlite3_value pVal){
 return sqlite3ValueText(pVal, SQLITE_UTF16LE);
 }
 #endif // * SQLITE_OMIT_UTF16 */
-    static int sqlite3_value_type( sqlite3_value pval )
+    public static int sqlite3_value_type( sqlite3_value pval )
     {
       return pval.type;
     }
@@ -228,7 +228,7 @@ return sqlite3ValueText(pVal, SQLITE_UTF16LE);
         sqlite3_result_error_toobig( pCtx );
       }
     }
-    static void sqlite3_result_blob(
+    public static void sqlite3_result_blob(
     sqlite3_context pCtx,
     string z,
     int n,
@@ -239,12 +239,12 @@ return sqlite3ValueText(pVal, SQLITE_UTF16LE);
       Debug.Assert( sqlite3_mutex_held( pCtx.s.db.mutex ) );
       setResultStrOrError( pCtx, z, n, 0, xDel );
     }
-    static void sqlite3_result_double( sqlite3_context pCtx, double rVal )
+    public static void sqlite3_result_double( sqlite3_context pCtx, double rVal )
     {
       Debug.Assert( sqlite3_mutex_held( pCtx.s.db.mutex ) );
       sqlite3VdbeMemSetDouble( pCtx.s, rVal );
     }
-    static void sqlite3_result_error( sqlite3_context pCtx, string z, int n )
+    public static void sqlite3_result_error( sqlite3_context pCtx, string z, int n )
     {
       Debug.Assert( sqlite3_mutex_held( pCtx.s.db.mutex ) );
       setResultStrOrError( pCtx, z, n, SQLITE_UTF8, SQLITE_TRANSIENT );
@@ -273,7 +273,7 @@ return sqlite3ValueText(pVal, SQLITE_UTF16LE);
       sqlite3VdbeMemSetNull( pCtx.s );
     }
 
-    static public void sqlite3_result_text(
+    public static void sqlite3_result_text(
     sqlite3_context pCtx,
     string z,
     int n,
@@ -572,7 +572,7 @@ end_of_step:
     ** context is allocated on the first call.  Subsequent calls return the
     ** same context that was returned on prior calls.
     */
-    static Mem sqlite3_aggregate_context( sqlite3_context p, int nByte )
+    public static Mem sqlite3_aggregate_context( sqlite3_context p, int nByte )
     {
       Mem pMem;
       Debug.Assert( p != null && p.pFunc != null && p.pFunc.xStep != null );
@@ -693,7 +693,7 @@ failed:
     /*
 ** Return the number of columns in the result set for the statement pStmt.
 */
-    static public int sqlite3_column_count( sqlite3_stmt pStmt )
+    public static int sqlite3_column_count( sqlite3_stmt pStmt )
     {
       Vdbe pVm = pStmt;
       return pVm != null ? (int)pVm.nResColumn : 0;
@@ -703,7 +703,7 @@ failed:
     ** Return the number of values available from the current row of the
     ** currently executing statement pStmt.
     */
-    static int sqlite3_data_count( sqlite3_stmt pStmt )
+    public static int sqlite3_data_count( sqlite3_stmt pStmt )
     {
       Vdbe pVm = pStmt;
       if ( pVm == null || pVm.pResultSet == null ) return 0;
@@ -957,7 +957,7 @@ pStmt, N,  sqlite3_value_text16, COLNAME_NAME);
 ** Return the column declaration type (if applicable) of the 'i'th column
 ** of the result set of SQL statement pStmt.
 */
-    static string sqlite3_column_decltype( sqlite3_stmt pStmt, int N )
+    public static string sqlite3_column_decltype( sqlite3_stmt pStmt, int N )
     {
       return columnName(
       pStmt, N, sqlite3_value_text, COLNAME_DECLTYPE );
@@ -1153,7 +1153,7 @@ pStmt, N, (const void*(*)(Mem*))sqlite3_value_text16, COLNAME_COLUMN);
       } return rc;
     }
 
-    static public int sqlite3_bind_text(
+    public static int sqlite3_bind_text(
     sqlite3_stmt pStmt,
     int i,
     string zData,
@@ -1293,7 +1293,7 @@ return bindText(pStmt, i, zData, nData, xDel, SQLITE_UTF16NATIVE);
     ** with that name.  If there is no variable with the given name,
     ** return 0.
     */
-    static int sqlite3_bind_parameter_index( sqlite3_stmt pStmt, string zName )
+    public static int sqlite3_bind_parameter_index( sqlite3_stmt pStmt, string zName )
     {
       Vdbe p = (Vdbe)pStmt;
       int i;

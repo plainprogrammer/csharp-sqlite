@@ -50,7 +50,7 @@ namespace CS_SQLite3
     */
     //OVERLOADS
 
-    static public int sqlite3_exec(
+    public static int sqlite3_exec(
     sqlite3 db,             /* The database on which the SQL executes */
     string zSql,            /* The SQL to be executed */
     int NoCallback, int NoArgs, int NoErrors
@@ -60,7 +60,7 @@ namespace CS_SQLite3
       return sqlite3_exec( db, zSql, null, null, ref Errors );
     }
 
-    static public int sqlite3_exec(
+    public static int sqlite3_exec(
     sqlite3 db,             /* The database on which the SQL executes */
     string zSql,                /* The SQL to be executed */
     sqlite3_callback xCallback, /* Invoke this callback routine */
@@ -71,7 +71,7 @@ namespace CS_SQLite3
       string Errors = "";
       return sqlite3_exec( db, zSql, xCallback, pArg, ref Errors );
     }
-    static public int sqlite3_exec(
+    public static int sqlite3_exec(
     sqlite3 db,             /* The database on which the SQL executes */
     string zSql,                /* The SQL to be executed */
     sqlite3_callback xCallback, /* Invoke this callback routine */

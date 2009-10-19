@@ -892,7 +892,7 @@ end_prepare:
     ** and the statement is automatically recompiled if an schema change
     ** occurs.
     */
-    static public int sqlite3_prepare(
+    public static int sqlite3_prepare(
     sqlite3 db,           /* Database handle. */
     string zSql,          /* UTF-8 encoded SQL statement. */
     int nBytes,           /* Length of zSql in bytes. */
