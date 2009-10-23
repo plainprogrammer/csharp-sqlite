@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 10.00
 # Visual Studio 2008
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Community.Data.SQLite", "Community.Data.SQLite.csproj", "{F1653F20-D47D-4F29-8C55-3C835542AF5F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Community.Data.SQLite.UnitTests", "..\Community.Data.SQLite.UnitTests\Community.Data.SQLite.UnitTests.csproj", "{59E27BF3-3D31-42E5-BA21-FAEE135E699F}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Community.Data.SQLite.Test", "..\Community.Data.SQLite.Test\Community.Data.SQLite.Test.csproj", "{59E27BF3-3D31-42E5-BA21-FAEE135E699F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
